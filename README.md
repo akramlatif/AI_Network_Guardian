@@ -1,70 +1,90 @@
 # AI Network Guardian
 
-AI Network Guardian is an intelligent security monitoring system designed to detect suspicious activities and abnormal behavior in a network environment. The system analyzes network logs and user behavior to identify potential threats and alert administrators before damage occurs.
-
-## Project Overview
-
-With the rapid increase in cyber threats, organizations need smarter ways to monitor their systems. AI Network Guardian uses artificial intelligence techniques to analyze system logs and network behavior patterns to detect anomalies and possible security breaches.
-
-This project focuses on building an AI-based system that can automatically monitor network activity and identify unusual behavior.
+AI Network Guardian is a full-stack network security monitoring platform with a modern Next.js dashboard and a Python backend for packet capture, feature extraction, and ML-based threat detection.
 
 ## Features
 
-* Real-time network monitoring
-* Suspicious activity detection
-* Log analysis for anomaly detection
-* Automated threat alerts
-* Scalable AI-based monitoring system
+- Live network traffic visualization
+- Threat alerts and system log views
+- API endpoints for traffic, threats, classifications, and logs
+- Python modules for capture, extraction, streaming, and detection
 
-## Technologies Used
+## Tech Stack
 
-* Python
-* Machine Learning / AI
-* Log Analysis Techniques
-* Network Monitoring Concepts
+- Frontend: Next.js, React, Tailwind CSS, TypeScript
+- Backend: Python (FastAPI-style routing structure)
+- ML/Processing: custom detection and network feature extraction modules
 
 ## Project Structure
 
-AI_Network_Guardian
-│
-├── dataset/
-├── models/
-├── src/
-├── main.py
-├── requirements.txt
+```text
+AI_Network_Guardian/
+├── src/                    # Next.js frontend (app router)
+│   ├── app/
+│   └── components/
+├── backend/                # Python backend services
+│   ├── api/
+│   ├── ml/
+│   ├── sniffer/
+│   └── streaming/
+├── package.json
 └── README.md
+```
 
-## How to Run the Project
+## Run Locally
 
-1. Clone the repository:
+### 1) Clone
 
+```bash
 git clone https://github.com/akramlatif/AI_Network_Guardian.git
-
-2. Navigate to the project folder:
-
 cd AI_Network_Guardian
+```
 
-3. Install required libraries:
+### 2) Frontend (Next.js)
 
+```bash
+pnpm install
+pnpm dev
+```
+
+Frontend runs at `http://localhost:3000`.
+
+### 3) Backend (Python)
+
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-
-4. Run the main file:
-
 python main.py
+```
 
-## Future Improvements
+## Dashboard Screenshots
 
-* Real-time dashboard for monitoring
-* Integration with network firewalls
-* Advanced anomaly detection models
-* Email or SMS alert system
-* Automated response to security threats
+### Home
+
+![Home Dashboard](docs/images/home.png)
+
+### Network Traffic
+
+![Network Traffic](docs/images/network-traffic.png)
+
+### Threat Alerts
+
+![Threat Alerts](docs/images/threat-alerts.png)
+
+### System Logs
+
+![System Logs](docs/images/system-logs.png)
+
+### Settings
+
+![Settings](docs/images/settings.png)
 
 ## Author
 
 Akram Latif
-Cyber Security Student
 
 ## License
 
-This project is created for educational and research purposes.
+This project is for educational and research purposes.
