@@ -61,6 +61,8 @@ python main.py
 
 ## Dashboard Screenshots
 
+Updated with the latest GuardianOS dashboard views.
+
 ### Home
 
 ![Home Dashboard](docs/images/home.png)
